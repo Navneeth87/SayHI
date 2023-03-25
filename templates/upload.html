@@ -8,7 +8,9 @@
 <body>
     <div class="banner">
         <div class="navbar">
-            <img src="{{url_for('static',filename='images/logo.png')}}" class="logo">
+            <a href="{{url_for('main')}}">
+                <img src="{{url_for('static',filename='images/logo.png')}}" class="logo">
+            </a>   
         </div>
         <div class="upload">
             <h1>Upload Your Audio Files</h1>
@@ -35,7 +37,7 @@
                 <button type="button"><span></span>
                     Reset</button></a>
                         <input type="submit"><span></span>
-                            Scan</button>
+                </button>
             </form>
                             <p>Back to Home page <a href="{{url_for('main')}}">Home</a></p>
 

@@ -3,14 +3,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign UP Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/style.css')}}">
 </head>
 <body>
     <div class="banner">
         <div class="signup">
-            <img src="logo.png" class = "logoo">
+           <a href="{{url_for('main')}}">
+            <img src="{{url_for('static',filename='images/logo.png')}}" class = "logoo">
+            </a>
            <h2>Welcome to Say Hii</h2>
-           <button><img src="google.png">Continue with Google</button>
+           <button><img src="{{url_for('static',filename='images/google.png')}}">Continue with Google</button>
            <hr>
            <form>
             <input type="text" placeholder="Email or Username">
@@ -19,8 +21,8 @@
             <button type="button"><span></span>
                 Sumbit</button></a>
            </form>
-           <p>Already a User? <a href="login.html">Log In</a></p>
-           <p>Back to Home page <a href="index.html">Home</a></p>
+           <p>Already a User? <a href="{{url_for('login')}}">Log In</a></p>
+           <p>Back to Home page <a href="{{url_for('main')}}">Home</a></p>
         </div>
  
      </div>

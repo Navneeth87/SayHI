@@ -22,6 +22,10 @@ def login():
 def upload():
     return render_template("upload.html")
 
+@app.route('/signup')
+def signup():
+    return render_template("signup.html")
+
 @app.route('/api',methods=['POST'])
 def predict():
     try:
