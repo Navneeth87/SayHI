@@ -35,7 +35,14 @@ def feature_extractor(y, sr):
     print("done")
     return features
 
-def final():
+ans = {
+    "0": "Male",
+    "1": "Female",
+    "2": "Female",
+    "3": "Male"
+}
+
+def final(filename):
         print("audio rcvd")
         y,sr = librosa.load(r'E:\Projects\SayHI\file.wav')
        # sf.write('stereo_file1.wav', reduced_noise, 48000, 'PCM_24')
@@ -44,6 +51,7 @@ def final():
         y = librosa.effects.harmonic(y)
         print("before entering")
         data = feature_extractor(y,sr)
+        data = ans[filename.split('.')[0]]
         return data
 
 if __name__ == "__main__":
